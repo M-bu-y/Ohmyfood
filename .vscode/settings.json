@@ -3,7 +3,7 @@
         {
             "format": "expanded",
             "extensionName": ".css",
-            "savePath": "/assets/CSS"
+            "savePath": "/assets/css"
         }
     ],
     "liveSassCompile.settings.generateMap": false,
@@ -12,6 +12,10 @@
         "last 2 versions"
     ],
     "liveSassCompile.settings.includeItems": [
-        "/SASS/main.scss"
+        "/sass/main.scss"
+    ],
+    "cSpell.words": [
+        "Gombe",
+        "Ohmyfood"
     ]
 }
