@@ -13,9 +13,5 @@
     ],
     "liveSassCompile.settings.includeItems": [
         "/sass/main.scss"
-    ],
-    "cSpell.words": [
-        "Gombe",
-        "Ohmyfood"
-    ]
+    ] 
 }
