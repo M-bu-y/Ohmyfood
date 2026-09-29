@@ -1,0 +1,41 @@
+/*==================== IMPORT "VARIABLES" ====================*/
+@use './variables' as vars;
+
+/*====================== MIXIN ======================*/
+
+    /*============= Flexbox =============*/
+    @mixin flex(
+        $direction: initial,
+        $justify: initial,
+        $align: initial,
+        $gap: initial
+    )     {
+        display: flex;
+        flex-direction: $direction;
+        justify-content: $justify;
+        align-items: $align;
+        gap:$gap;
+    }
+
+    /*============= Media Queries =============*/
+    /*  Sources techniques :
+     * Mixins Sass (@mixin, @content) : https://sass-lang.com/documentation/at-rules/mixin/
+     * Media queries CSS : https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using
+     */ 
+    @mixin tablet {
+        @media (min-width: #{vars.$Tablet-width}) {
+            @content;
+        }
+    }
+
+    @mixin desktop {
+        @media (min-width: #{vars.$Desktop-width}) {
+            @content;
+        }
+    }
+
+    @mixin large-desktop {
+        @media (min-width: #{vars.$Large-desktop-width}) {
+            @content;
+        }
+    }
