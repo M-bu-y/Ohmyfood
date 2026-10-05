@@ -1,0 +1,53 @@
+/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/*=============== BUTTON STYLE ===============*/
+/* Style des boutons de la section "fonctionnement" */
+.fonctionnement {
+    /* Applique le style au block <ol> */
+    &__buttons {
+        counter-reset: nbButton; /* Initialiser un compteur de chiffre */
+    }
+}
+
+/* Applique le style aux <li> */
+.button-form {
+    @include flex($align: center);
+    counter-increment: nbButton; /* Ajout un chiffre au côté gauche des icônes */
+    width: 100%;
+    @include desktop {
+        max-width: 20.9rem;
+    }
+
+    /* Change le style des chiffres à gauche des icônes */
+    &:before {
+        @include flex($justify: center, $align: center);
+        content: counter(nbButton); /* Affiche le chiffre au côté gauche des icônes */
+        z-index: +1; /* Permet aux chiffres d'apparaître devant le rectangle */
+        background-color: $Primary-color;
+        color: white;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+    }
+
+    /* Style de couleur pour les icônes */
+    &__icon {
+        color: $Color-fonction-button;
+    }
+
+    /* Forme de rectangle */
+    &__link {
+        margin-left: -0.75rem;
+        width: 100%;
+        border-radius: 1.25rem;
+        padding-left: 1.5rem;
+        @include flex($align: center, $gap: 1.43rem);
+        background-color: #F6F6F6;
+        height: 4.52rem;
+        border: 0.06rem solid transparent;
+        box-shadow: 0rem 0.25rem 0.93rem $shadows-fonction;
+        transition: box-shadow 0.5s, border-color 0.5s, background-color 0.5s;
+    }
+}
