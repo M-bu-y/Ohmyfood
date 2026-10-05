@@ -1,0 +1,59 @@
+/*=============== IMPORT VARIABLES ===============*/
+@use "../abstracts/variables" as *;
+
+/*=============== HEART STYLE ===============*/
+/* Déclaration de "dégradé de couleur" */
+%color-heart {
+    background: linear-gradient($Primary-color, $Secondary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.2s ease;
+}
+
+/* Désactive l'icône de base de checking  */
+.heart input {
+    display: none;
+} 
+
+/* Taille des icônes de cœur */
+.fa-heart {
+    display: inline-block;
+    width: 1.62rem;
+    font-size: 1.5rem;
+    transition: transform 0.2s ease;
+   
+}
+
+.heart label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Couleur du cœur au survole de l'élément */
+.far:hover {
+    @extend %color-heart;
+    transform: scale(1.05);
+}
+
+/* Couleur du cœur une fois cliqué */ 
+.fas {
+    @extend %color-heart;
+}
+
+/* Les actions aux cliques des icônes de cœur */
+.heart input:not(:checked) + label > i.far {
+    display: block;
+}
+
+.heart input:checked + label > i.far {
+    display: none;
+}
+
+.heart input:not(:checked) + label > i.fas {
+    display: none;
+}
+
+.heart input:checked + label > i.fas {
+    display: block;
+}
