@@ -1,0 +1,28 @@
+/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/*=============== HEADER ===============*/
+header {
+    background-color: $Background-color-header;
+    @include flex($align: center, $justify: center);
+}
+
+.header__logo--img {
+    padding: 0.87rem 5.56rem 0.81rem 1.06rem;
+    margin-left: 5rem;   
+}
+
+.header__nav--arrow {
+    @include flex($align: center, $justify: center);
+    width: 1.87rem;
+    height: 1.87rem;
+    position: absolute;
+    left: 1.18rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    transition: transform 0.3s ease;
+    &:hover {
+        transform: scale(1.25);
+    }
+}

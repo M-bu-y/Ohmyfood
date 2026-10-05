@@ -1,0 +1,90 @@
+/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/*=============== FOOTER ===============*/
+footer {
+    width: 100%;
+    background-color: $Background-color-footer;
+    @include large-desktop {
+        @include flex($justify: center);
+    }
+    
+    .footer {
+        @include flex($direction: column, $gap: 1rem);
+        width: 100%;
+        padding: 1.37rem 1.56rem;
+        max-width: 90rem;
+
+        @include tablet {
+            @include flex(row-reverse, space-between, center, 0);
+            min-height: 7.12rem;
+            padding: 1.87rem 1.09rem;
+            address .footer__link {
+                width: auto;
+            }
+        }
+
+        @include desktop {
+            @include flex(row-reverse, initial, flex-end, 1rem);
+            height: 7.12rem;
+            gap: 1rem;
+            padding: 1.87rem 1.56rem;
+            address .footer__link {
+                width: 8.12rem;
+            }
+        }
+
+        &__title {
+            height: 1.68rem;
+            transition: color 0.25s;
+            &:hover {
+                color: $Secondary-color;
+            }
+            @include tablet {
+                width: auto;
+                max-width: none;
+                flex: 0 0 auto;
+            }
+            @include desktop {
+                width: 16%;
+                max-width: 8.68rem;
+                flex: initial;
+            }
+        }
+
+        &__list {
+            @include flex($direction: column, $gap: 0.43rem);
+            @include tablet {
+                @include flex(row, space-between, center, 0.5rem);
+                flex-wrap: nowrap;
+                flex: 0 1 auto;
+                min-width: 0;
+            }
+            @include desktop {
+                @include flex(row, flex-end, flex-end, 0.43rem);
+                flex-wrap: nowrap;
+                flex: 1 1 0;
+                min-width: 0;
+            }
+        }
+
+        &__link {
+            @include flex($align: center, $gap: 0.62rem);
+            height: 1.18rem;
+            width: 11.87rem;
+            transition: color 0.25s;
+            @include tablet {
+                width: auto;
+                white-space: nowrap;
+            }
+            @include desktop {
+                width: 11.87rem;
+                white-space: normal;
+            }
+            &:hover {
+                color: $Secondary-color;
+            }
+        }
+    }
+}
