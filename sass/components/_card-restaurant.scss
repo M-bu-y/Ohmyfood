@@ -1,0 +1,115 @@
+/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/*=============== CARD STYLE "RESTAURANT" ===============*/
+/*Design des cards */
+.restaurant__card--info {
+    @include flex ($justify: space-between, $align: center);
+    margin-top: 1rem;
+    border-radius: 0.93rem;
+    width: 100%;
+    height: 5rem;
+    background-color: white;
+    box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.5s;
+
+    /* Animation au survole des cards */
+    &:hover {
+        box-shadow: 0 0.25rem 1.25rem #00000059;
+
+        .restaurant__card--price {
+            transform: translateX(0rem);
+
+            .restaurant__card--animation {
+                background-color: $Tertiary-color;
+
+                .fa-circle-check {
+                    transform: rotate(2turn);
+                }
+            }
+        }
+    }
+
+    /* Style du conteneur d'information des cards */
+    .restaurant__card--content {
+        flex: 1 1 0;
+        min-width: 0;
+        border-radius: 0.93rem;
+        padding-left: 0.7rem;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+        height: 100%;
+
+        /* Style des titre <h3> d'information des cards */
+        .restaurant__card--title {
+            margin-top: 0.75rem;
+            padding-right: 1.87rem;
+            font-family: $Body-font-text;
+            font-weight: $Font-size-bigger;
+            font-size: 0.95rem;
+        }
+
+        /* Style des sous-titres <h3> d'information des cards */
+        .restaurant__card--subtitle {
+            margin-top: 0.75rem;
+            font-family: $Body-font-text;
+            font-weight: $Font-size-small;
+            font-size: 0.85rem;
+        }
+    }
+
+    /* Style des conteneurs de prix */
+    .restaurant__card--price {
+        @include flex ($align: center);
+        width: 6.25rem;
+        height: 100%;
+        transform: translateX(3.12rem);
+        transition: all 0.4s;
+    
+        p {
+    
+            font-weight: $Font-size-big;
+            margin-right: 0.62rem;
+        }
+    
+        span {
+          @include flex ($justify: center, $align: center);
+          width: 100%;
+          height: 100%;
+    
+          /* Style de l'icône au côté droit des prix */
+          .fa-circle-check {
+            color: white;
+    
+            font-size: 1.5rem;
+            transition: all 0.5s;
+            }
+    
+        }
+    
+    }
+    
+}
+
+@media (max-width: 767px) {
+    .restaurant__card--info {
+        height: auto;
+        min-height: 5.25rem;
+
+        .restaurant__card--content {
+            height: auto;
+
+            .restaurant__card--subtitle {
+                margin-top: 0.85rem;
+            }
+        }
+
+        .restaurant__card--price {
+            height: auto;
+            align-self: stretch;
+            transform: translateX(3.9rem);
+        }
+    }
+}
