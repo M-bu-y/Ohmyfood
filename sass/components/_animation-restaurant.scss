@@ -1,0 +1,65 @@
+/*=============== ANIMATION CONTENU PAGE RESTAURANT ===============*/
+.restaurant {
+    /* Animation des titres <h2> "Entrées - Plats - Desserts" */
+    &__card--title2 {
+        animation: fade-in 2s ease-in-out backwards;
+        opacity: 1;
+        @for $i from 1 through 3 {
+            &:nth-of-type(#{$i}) {
+                animation-delay: ($i - 1) * 400ms;
+            }
+        }
+    }
+
+    /* Animation des cartes du menu */
+    &__card--info {
+        opacity: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        animation: reveal-card 500ms ease-in-out both;
+        @for $i from 1 through 10 {
+            &:nth-of-type(#{$i}) {
+                animation-delay: ($i - 1) * 200ms;
+            }
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .restaurant {
+        &__card--title2 {
+            animation: none;
+        }
+
+        &__card--info {
+            animation: none;
+            opacity: 1;
+            transform: none;
+        }
+    }
+}
+
+/*=============== KEYFRAMES PAGE RESTAURANT ===============*/
+@keyframes fade-in {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes reveal-card {
+    from {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
