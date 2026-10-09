@@ -1,0 +1,1613 @@
+@charset "UTF-8";
+/*=============== IMPORT ABSTRACTS ===============*/
+/*==================== IMPORT "VARIABLES" ====================*/
+/*=============== GOOGLE FONT ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+/*==================== VARIABLES SASS ====================*/
+/*=============== Theme colors ===============*/
+/*=============== Background colors ===============*/
+/* body */
+/* Auto dark : prefers-color-scheme */
+/* Barre de navigation */
+/* Auto dark : prefers-color-scheme */
+/* Section localisation */
+/* Auto dark : prefers-color-scheme */
+/* Section information */
+/* Section fonctionnement */
+/* Auto dark : prefers-color-scheme */
+/* Cards "index & restaurants" */
+/* Auto dark : prefers-color-scheme */
+/* Couleur d'arrière plan du footer */
+/*=============== Scrollbar colors ===============*/
+/* Auto dark : prefers-color-scheme */
+/*=============== Button color fonction ===============*/
+/*=============== Button shadow colors ===============*/
+/* Auto dark : prefers-color-scheme */
+/*=============== typography ===============*/
+/*=============== Font weight ===============*/
+/*=============== Screen width for "media queries" ===============*/
+/*====================== MIXIN ======================*/
+/*============= Flexbox =============*/
+/*============= Media Queries =============*/
+/*  Sources techniques :
+ * Mixins Sass (@mixin, @content) : https://sass-lang.com/documentation/at-rules/mixin/
+ * Media queries CSS : https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using
+ */
+/*=============== IMPORT BASE ===============*/
+/*=============== RESET ===============*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #F6F6F6;
+  color: #000;
+  font-family: Roboto, sans-serif;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+p,
+figure {
+  margin: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+:focus-visible {
+  outline: 2px solid #FF79DA;
+  outline-offset: 2px;
+}
+
+/*=============== TYPOGRAPHY ===============*/
+h1,
+.footer__title {
+  font-family: Shrikhand, cursive;
+}
+
+h2,
+.info__title,
+.info__button,
+p,
+.footer__list {
+  font-family: Roboto, sans-serif;
+}
+
+.footer__title,
+.footer__list {
+  color: #fff;
+}
+
+/*=============== SCROLLBAR ===============*/
+::-webkit-scrollbar {
+  width: 0.7rem;
+  border-radius: 0.3rem;
+  background-color: #c4bdba;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: #807977;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(171.3, 124.025, 227.875);
+}
+
+/*=============== IMPORT COMPONENTS ===============*/
+/*=============== ANIMATION CONTENU PAGE RESTAURANT ===============*/
+.restaurant {
+  /* Animation des titres <h2> "Entrées - Plats - Desserts" */
+}
+.restaurant__card--title2 {
+  -webkit-animation: fade-in 2s ease-in-out backwards;
+          animation: fade-in 2s ease-in-out backwards;
+  opacity: 1;
+}
+.restaurant__card--title2:nth-of-type(1) {
+  -webkit-animation-delay: 0ms;
+          animation-delay: 0ms;
+}
+.restaurant__card--title2:nth-of-type(2) {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+.restaurant__card--title2:nth-of-type(3) {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
+.restaurant {
+  /* Animation des cartes du menu */
+}
+.restaurant__card--info {
+  opacity: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-animation: reveal-card 500ms ease-in-out both;
+          animation: reveal-card 500ms ease-in-out both;
+}
+.restaurant__card--info:nth-of-type(1) {
+  -webkit-animation-delay: 0ms;
+          animation-delay: 0ms;
+}
+.restaurant__card--info:nth-of-type(2) {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+.restaurant__card--info:nth-of-type(3) {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+.restaurant__card--info:nth-of-type(4) {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+.restaurant__card--info:nth-of-type(5) {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
+.restaurant__card--info:nth-of-type(6) {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
+}
+.restaurant__card--info:nth-of-type(7) {
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
+}
+.restaurant__card--info:nth-of-type(8) {
+  -webkit-animation-delay: 1400ms;
+          animation-delay: 1400ms;
+}
+.restaurant__card--info:nth-of-type(9) {
+  -webkit-animation-delay: 1600ms;
+          animation-delay: 1600ms;
+}
+.restaurant__card--info:nth-of-type(10) {
+  -webkit-animation-delay: 1800ms;
+          animation-delay: 1800ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .restaurant__card--title2 {
+    -webkit-animation: none;
+            animation: none;
+  }
+  .restaurant__card--info {
+    -webkit-animation: none;
+            animation: none;
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+/*=============== KEYFRAMES PAGE RESTAURANT ===============*/
+@-webkit-keyframes fade-in {
+  from {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes reveal-card {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+@keyframes reveal-card {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+/*=============== IMPORT "VARIABLES" ===============*/
+/*=============== BUTTON STYLE ===============*/
+/* Style des boutons "explorer nos restaurants & commander" */
+.info__button,
+.restaurant__button-order {
+  cursor: pointer;
+  color: white;
+  width: 13.62rem;
+  height: 3.12rem;
+  border: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-radius: 1.56rem;
+  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  -webkit-box-shadow: 0 0.25rem 0.62rem 0 rgba(0, 0, 0, 0.2509803922);
+          box-shadow: 0 0.25rem 0.62rem 0 rgba(0, 0, 0, 0.2509803922);
+  -webkit-transition: -webkit-box-shadow 0.3s ease, -webkit-transform 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease, -webkit-transform 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, -webkit-box-shadow 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.info__button:hover,
+.restaurant__button-order:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.1490196078) 0%, rgba(255, 255, 255, 0.1490196078) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  -webkit-box-shadow: 0 0.25rem 0.93rem 0 rgba(0, 0, 0, 0.3490196078);
+          box-shadow: 0 0.25rem 0.93rem 0 rgba(0, 0, 0, 0.3490196078);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+/*=============== IMPORT ABSTRACTS ===============*/
+/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
+/*=============== BUTTON STYLE ===============*/
+/* Style des boutons de la section "fonctionnement" */
+.fonctionnement {
+  /* Applique le style au block <ol> */
+}
+.fonctionnement__buttons {
+  counter-reset: nbButton; /* Initialiser un compteur de chiffre */
+}
+
+/* Applique le style aux <li> */
+.button-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: initial;
+  counter-increment: nbButton; /* Ajout un chiffre au côté gauche des icônes */
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .button-form {
+    max-width: 20.9rem;
+  }
+}
+.button-form {
+  /* Change le style des chiffres à gauche des icônes */
+}
+.button-form:before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: initial;
+  content: counter(nbButton); /* Affiche le chiffre au côté gauche des icônes */
+  z-index: 1; /* Permet aux chiffres d'apparaître devant le rectangle */
+  background-color: #9356DC;
+  color: white;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+.button-form {
+  /* Style de couleur pour les icônes */
+}
+.button-form__icon {
+  color: #7E7E7E;
+}
+.button-form {
+  /* Forme de rectangle */
+}
+.button-form__link {
+  margin-left: -0.75rem;
+  width: 100%;
+  border-radius: 1.25rem;
+  padding-left: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.43rem;
+  background-color: #F6F6F6;
+  height: 4.52rem;
+  border: 0.06rem solid transparent;
+  -webkit-box-shadow: 0rem 0.25rem 0.93rem rgba(0, 0, 0, 0.1490196078);
+          box-shadow: 0rem 0.25rem 0.93rem rgba(0, 0, 0, 0.1490196078);
+  -webkit-transition: border-color 0.5s, background-color 0.5s, -webkit-box-shadow 0.5s;
+  transition: border-color 0.5s, background-color 0.5s, -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s, border-color 0.5s, background-color 0.5s;
+  transition: box-shadow 0.5s, border-color 0.5s, background-color 0.5s, -webkit-box-shadow 0.5s;
+}
+
+/*=============== IMPORT ABSTRACTS ===============*/
+/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
+/*=============== CARD STYLE "INDEX" ===============*/
+/* Design des cards */
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+  gap: 1rem;
+  width: 100%;
+  border-radius: 0.93rem;
+  background-color: white;
+  -webkit-box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-box-shadow 0.5s, -webkit-transform 0.5s;
+  transition: -webkit-box-shadow 0.5s, -webkit-transform 0.5s;
+  transition: box-shadow 0.5s, transform 0.5s;
+  transition: box-shadow 0.5s, transform 0.5s, -webkit-box-shadow 0.5s, -webkit-transform 0.5s;
+}
+.card:hover {
+  -webkit-box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.3490196078);
+          box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.3490196078);
+}
+.card {
+  /* Style de design pour le badge "nouveau" */
+}
+.card__restaurant--new:hover::before {
+  -webkit-box-shadow: 0.06rem 0.25rem 1.25rem rgba(0, 135, 102, 0.3);
+          box-shadow: 0.06rem 0.25rem 1.25rem rgba(0, 135, 102, 0.3);
+}
+.card__restaurant--new::before {
+  content: "Nouveau";
+  font-family: Roboto;
+  position: absolute;
+  right: 3.53%;
+  top: 5.18%;
+  width: 5rem;
+  height: 1.81rem;
+  line-height: 1.81rem;
+  text-align: center;
+  background-color: #99E2D0;
+  color: #008766;
+  border-radius: 0rem 0.12rem 0.25rem 0rem;
+  -webkit-transition: -webkit-box-shadow 0.5s, -webkit-transform 0.5s;
+  transition: -webkit-box-shadow 0.5s, -webkit-transform 0.5s;
+  transition: box-shadow 0.5s, transform 0.5s;
+  transition: box-shadow 0.5s, transform 0.5s, -webkit-box-shadow 0.5s, -webkit-transform 0.5s;
+}
+.card {
+  /* Largeur et positionnement de card */
+}
+.card__restaurant--link {
+  width: 100%;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .card__restaurant--link {
+    width: calc((100% - 1.25rem) / 2);
+  }
+}
+@media (min-width: 1024px) {
+  .card__restaurant--link {
+    width: calc((100% - 3.12rem) / 2);
+    max-width: 30.6rem;
+  }
+}
+.card {
+  /* Redimensionnement de taille de l'image de card */
+}
+.card__restaurant--img {
+  border-radius: 0.93rem 0.93rem 0 0;
+  height: 10.79rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card {
+  /* Style du contenu "titre et description" de card */
+}
+.card__restaurant--content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+  gap: 0.31rem;
+  padding: 0 1.4rem 0 1.4rem;
+}
+.card {
+  /* Style du titre de card */
+}
+.card__restaurant--title {
+  font-family: Roboto;
+  padding-left: 0.18rem;
+  margin-top: -0.3rem;
+  width: 100%;
+}
+.card {
+  /* Style du sous-titre de card */
+}
+.card__restaurant--subtitle {
+  font-weight: 300;
+  padding-left: 0.18rem;
+  padding-bottom: 1rem;
+}
+.card {
+  /* Positionnement de l'icône de card */
+}
+.card__restaurant--icon {
+  position: absolute;
+  right: 1.4rem;
+  bottom: 3rem;
+}
+
+/*=============== IMPORT ABSTRACTS ===============*/
+/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
+/*=============== CARD STYLE "RESTAURANT" ===============*/
+/*Design des cards */
+.restaurant__card--info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: initial;
+  margin-top: 1rem;
+  border-radius: 0.93rem;
+  width: 100%;
+  height: 5rem;
+  background-color: white;
+  -webkit-box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
+  /* Animation au survole des cards */
+}
+.restaurant__card--info:hover {
+  -webkit-box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.3490196078);
+          box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.3490196078);
+}
+.restaurant__card--info:hover .restaurant__card--price {
+  -webkit-transform: translateX(0rem);
+          transform: translateX(0rem);
+}
+.restaurant__card--info:hover .restaurant__card--price .restaurant__card--animation {
+  background-color: #99E2D0;
+}
+.restaurant__card--info:hover .restaurant__card--price .restaurant__card--animation .fa-circle-check {
+  -webkit-transform: rotate(2turn);
+          transform: rotate(2turn);
+}
+.restaurant__card--info {
+  /* Style du conteneur d'information des cards */
+}
+.restaurant__card--info .restaurant__card--content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  min-width: 0;
+  border-radius: 0.93rem;
+  padding-left: 0.7rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  height: 100%;
+  /* Style des titre <h3> d'information des cards */
+}
+.restaurant__card--info .restaurant__card--content .restaurant__card--title {
+  margin-top: 0.75rem;
+  padding-right: 1.87rem;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.restaurant__card--info .restaurant__card--content {
+  /* Style des sous-titres <h3> d'information des cards */
+}
+.restaurant__card--info .restaurant__card--content .restaurant__card--subtitle {
+  margin-top: 0.75rem;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 0.85rem;
+}
+.restaurant__card--info {
+  /* Style des conteneurs de prix */
+}
+.restaurant__card--info .restaurant__card--price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: initial;
+  width: 6.25rem;
+  height: 100%;
+  -webkit-transform: translateX(3.12rem);
+          transform: translateX(3.12rem);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.restaurant__card--info .restaurant__card--price p {
+  font-weight: 500;
+  margin-right: 0.62rem;
+}
+.restaurant__card--info .restaurant__card--price span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: initial;
+  width: 100%;
+  height: 100%;
+  /* Style de l'icône au côté droit des prix */
+}
+.restaurant__card--info .restaurant__card--price span .fa-circle-check {
+  color: white;
+  font-size: 1.5rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+@media (max-width: 767px) {
+  .restaurant__card--info {
+    height: auto;
+    min-height: 5.25rem;
+  }
+  .restaurant__card--info .restaurant__card--content {
+    height: auto;
+  }
+  .restaurant__card--info .restaurant__card--content .restaurant__card--subtitle {
+    margin-top: 0.85rem;
+  }
+  .restaurant__card--info .restaurant__card--price {
+    height: auto;
+    -ms-flex-item-align: stretch;
+        align-self: stretch;
+    -webkit-transform: translateX(3.9rem);
+            transform: translateX(3.9rem);
+  }
+}
+/*=============== IMPORT VARIABLES ===============*/
+/*=============== HEART STYLE ===============*/
+/* Déclaration de "dégradé de couleur" */
+.fas, .far:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+/* Désactive l'icône de base de checking  */
+.heart input {
+  display: none;
+}
+
+/* Taille des icônes de cœur */
+.fa-heart {
+  display: inline-block;
+  width: 1.62rem;
+  font-size: 1.5rem;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+.heart label {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Couleur du cœur au survole de l'élément */
+.far:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+/* Couleur du cœur une fois cliqué */
+/* Les actions aux cliques des icônes de cœur */
+.heart input:not(:checked) + label > i.far {
+  display: block;
+}
+
+.heart input:checked + label > i.far {
+  display: none;
+}
+
+.heart input:not(:checked) + label > i.fas {
+  display: none;
+}
+
+.heart input:checked + label > i.fas {
+  display: block;
+}
+
+/*=============== IMPORT LAYOUT ===============*/
+/*=============== IMPORT ABSTRACTS ===============*/
+/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
+/*=============== LOADER ===============*/
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  inset: 0;
+  z-index: 2;
+  border-radius: 0.31rem;
+  -webkit-animation: loading 300ms forwards;
+          animation: loading 300ms forwards;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  /* Style d'arrière plan du loader source : https://youtu.be/3HRvb2tLqF4?si=dAvqkS3wlmoNzTr4 */
+}
+.loader__background--glass {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: initial;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(0.62rem);
+  -webkit-backdrop-filter: blur(0.62rem);
+  border: 0.06rem solid rgba(255, 255, 255, 0.18);
+  -webkit-box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.37);
+          box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.37);
+}
+.loader {
+  /* Style des cercles source : https://youtu.be/U3hCPkV9SnU?si=dl3_HEngwzSLMRHx */
+}
+.loader__circle {
+  margin: auto;
+  width: 15.6rem;
+  height: 15.6rem;
+  border-radius: 50%;
+  border: 0.43rem solid transparent;
+  border-top-color: #9356DC;
+  -webkit-animation: circle 2s linear infinite;
+          animation: circle 2s linear infinite;
+}
+.loader__circle::before, .loader__circle::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 0.43rem solid transparent;
+}
+.loader__circle::before {
+  top: 0.62rem;
+  left: 0.62rem;
+  right: 0.62rem;
+  bottom: 0.62rem;
+  border-top-color: #FF79DA;
+  -webkit-animation: circle 3s linear infinite;
+          animation: circle 3s linear infinite;
+}
+.loader__circle::after {
+  top: 1.56rem;
+  left: 1.56rem;
+  right: 1.56rem;
+  bottom: 1.56rem;
+  border-top-color: #99E2D0;
+  -webkit-animation: circle 1.5s linear infinite;
+          animation: circle 1.5s linear infinite;
+}
+
+/*=============== KEYFRAMES LOADER ===============*/
+/* Processus d'animation des cercles */
+@-webkit-keyframes circle {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes circle {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/* Processus d'animation d'arrière plan du loader "background glass" */
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    display: none;
+  }
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    display: none;
+  }
+}
+/*=============== IMPORT ABSTRACTS ===============*/
+/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
+/*=============== HEADER ===============*/
+header {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: initial;
+}
+
+.header__logo--img {
+  padding: 0.87rem 5.56rem 0.81rem 1.06rem;
+  margin-left: 5rem;
+}
+
+.header__nav--arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: initial;
+  width: 1.87rem;
+  height: 1.87rem;
+  position: absolute;
+  left: 1.18rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.header__nav--arrow:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+/*=============== IMPORT ABSTRACTS ===============*/
+/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
+/*=============== FOOTER ===============*/
+footer {
+  width: 100%;
+  background-color: #353535;
+}
+@media (min-width: 1440px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: initial;
+    -webkit-box-direction: initial;
+        -ms-flex-direction: initial;
+            flex-direction: initial;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
+    gap: initial;
+  }
+}
+footer .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.37rem 1.56rem;
+  max-width: 90rem;
+}
+@media (min-width: 768px) {
+  footer .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0;
+    min-height: 7.12rem;
+    padding: 1.87rem 1.09rem;
+  }
+  footer .footer address .footer__link {
+    width: auto;
+  }
+}
+@media (min-width: 1024px) {
+  footer .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    gap: 1rem;
+    height: 7.12rem;
+    gap: 1rem;
+    padding: 1.87rem 1.56rem;
+  }
+  footer .footer address .footer__link {
+    width: 8.12rem;
+  }
+}
+footer .footer__title {
+  height: 1.68rem;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+footer .footer__title:hover {
+  color: #FF79DA;
+}
+@media (min-width: 768px) {
+  footer .footer__title {
+    width: auto;
+    max-width: none;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+}
+@media (min-width: 1024px) {
+  footer .footer__title {
+    width: 16%;
+    max-width: 8.68rem;
+    -webkit-box-flex: initial;
+        -ms-flex: initial;
+            flex: initial;
+  }
+}
+footer .footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+  gap: 0.43rem;
+}
+@media (min-width: 768px) {
+  footer .footer__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0.5rem;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    min-width: 0;
+  }
+}
+@media (min-width: 1024px) {
+  footer .footer__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    gap: 0.43rem;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+    min-width: 0;
+  }
+}
+footer .footer__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.62rem;
+  height: 1.18rem;
+  width: 11.87rem;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+@media (min-width: 768px) {
+  footer .footer__link {
+    width: auto;
+    white-space: nowrap;
+  }
+}
+@media (min-width: 1024px) {
+  footer .footer__link {
+    width: 11.87rem;
+    white-space: normal;
+  }
+}
+footer .footer__link:hover {
+  color: #FF79DA;
+}
+
+/*=============== IMPORT PAGES ===============*/
+/*=============== IMPORT ABSTRACTS ===============*/
+/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
+/*=============== INDEX PAGE "LOCALISATION" ===============*/
+.localisation__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.06rem;
+  height: 3.12rem;
+  margin: 0 auto;
+  background-color: #eaeaea;
+}
+.localisation__container input[type=text] {
+  width: 8rem;
+  font: revert;
+  background-color: #eaeaea;
+  border: none;
+}
+.localisation__container input[type=text]:focus-visible {
+  outline: none;
+}
+.localisation__container input[type=text]:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+.localisation__container input[type=text]:focus::-moz-placeholder {
+  opacity: 0;
+}
+.localisation__container input[type=text]:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+.localisation__container input[type=text]:focus::-ms-input-placeholder {
+  opacity: 0;
+}
+.localisation__container input[type=text]:focus::placeholder {
+  opacity: 0;
+}
+
+/*=============== INDEX PAGE "INFORMATION" ===============*/
+.info {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0;
+  padding: 2.43rem 0rem 3.68rem 0rem;
+  background-color: #F6F6F6;
+}
+.info__title {
+  margin-bottom: 0.75rem;
+  width: calc(100% - 6.25rem);
+  min-width: 17.18rem;
+}
+.info__text {
+  margin-bottom: 1.68rem;
+  width: calc(100% - 3.75rem);
+  min-width: 19.68rem;
+}
+
+/*=============== INDEX PAGE "FONCTIONNEMENT" ===============*/
+.fonctionnement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+  gap: 1.62rem;
+  padding: 3rem 1.25rem 4.25rem 1.25rem;
+  background-color: #fff;
+}
+@media (min-width: 1024px) {
+  .fonctionnement {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1.56rem;
+  }
+}
+@media (min-width: 1024px) {
+  .fonctionnement__title {
+    width: 100%;
+    max-width: 65.79rem;
+  }
+}
+.fonctionnement__buttons {
+  font-family: Roboto;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+  gap: 1.56rem;
+}
+@media (min-width: 768px) {
+  .fonctionnement__buttons {
+    width: 100%;
+    max-width: 40rem;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1024px) {
+  .fonctionnement__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/*=============== INDEX PAGE "RESTAURANTS" ===============*/
+/* Style de l'ensemble de la section restaurants */
+.restaurants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.62rem;
+  padding: 3.37rem 1.09rem 4.12rem 1.09rem;
+}
+@media (min-width: 1024px) {
+  .restaurants {
+    padding-top: 1.87rem;
+  }
+}
+.restaurants {
+  /* Style du titre de la section "Restaurants" */
+}
+.restaurants__title {
+  padding-left: 0.18rem;
+  width: 100%;
+  max-width: 67.5rem;
+}
+.restaurants {
+  /* Style de l'ensemble du conteneur regroupant toutes les cards */
+}
+.restaurants__block--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.12rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  max-width: 67.5rem;
+}
+@media (min-width: 768px) {
+  .restaurants__block--container {
+    gap: 1.25rem;
+  }
+}
+@media (min-width: 1024px) {
+  .restaurants__block--container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 3.12rem;
+  }
+}
+
+/*=============== IMPORT ABSTRACTS ===============*/
+/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
+/*=============== MENU (Restaurants pages)===============*/
+/* Style appliqué à l'entièreté de la page restaurant */
+.restaurant {
+  font-style: normal;
+  line-height: normal;
+  background-color: white;
+  /* Style de redimensionnement de l'image de la page restaurant */
+}
+.restaurant__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 17.1rem;
+  width: 100%;
+}
+.restaurant {
+  /* Style du titre <h1> et de l'icon de la page restaurant */
+}
+.restaurant__page--headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+  gap: initial;
+  max-width: 65.9rem;
+  position: relative;
+  margin: -2.5rem auto 0 auto;
+  padding: 2rem 3.4vw 0 3.4vw;
+  border-radius: 2.5rem 2.5rem 0 0;
+  z-index: 1;
+  background: #F6F6F6;
+}
+@media (min-width: 768px) {
+  .restaurant__page--headline {
+    padding-right: 14rem;
+    padding-left: 14rem;
+  }
+}
+@media (min-width: 1024px) {
+  .restaurant__page--headline {
+    padding-right: 22.8rem;
+    padding-left: 22.8rem;
+  }
+}
+.restaurant {
+  /* Style des icônes de la page restaurant */
+}
+.restaurant__block--icons {
+  font-size: 1.37rem;
+  width: 1.5rem;
+}
+.restaurant {
+  /* Positionnement des icônes de la page restaurant */
+}
+.restaurant__page--icon {
+  position: absolute;
+  line-height: 2.56rem;
+}
+@media (max-width: 767px) {
+  .restaurant__page--headline {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .restaurant__block--icons {
+    -webkit-transform: translateX(-0.25rem);
+            transform: translateX(-0.25rem);
+  }
+  .restaurant__page--icon {
+    position: static;
+    line-height: normal;
+  }
+}
+.restaurant {
+  /* Style appliqué au contenu du menu "Entrées - Plats - Déserts" */
+}
+.restaurant__block--menu {
+  max-width: 65.9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+  gap: initial;
+  margin: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background: #F6F6F6;
+}
+@media (min-width: 768px) {
+  .restaurant__block--menu {
+    padding-right: 6.25rem;
+    padding-left: 6.25rem;
+  }
+}
+@media (min-width: 1024px) {
+  .restaurant__block--menu {
+    padding-right: 13.1rem;
+    padding-left: 13.1rem;
+  }
+}
+.restaurant {
+  /* Style des grands titres <h2> "Entrées - Plats - Déserts" */
+}
+.restaurant__card--title2 {
+  padding-top: 3rem;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 1.12rem;
+  /* Soulignement en vert des grands titres <h2> "Entrées - Plats - Déserts" */
+}
+.restaurant__card--title2::after {
+  content: "";
+  overflow: visible;
+  width: 3.06rem;
+  height: 0.18rem;
+  display: block;
+  background-color: #99E2D0;
+}
+.restaurant {
+  /* Positionnement du bouton "commander" */
+}
+.restaurant__button-order {
+  margin: 2rem auto 2.5rem auto;
+}
+
+/*=============== PREFERS-COLOR-SCHEME ===============*/
+/*=============== IMPORT "VARIABLES" ===============*/
+/*=============== PREFERS-COLOR-SCHEME ===============*/
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #595b68;
+  }
+  header {
+    background-color: #2b2c2f;
+  }
+  .header__logo--img {
+    -webkit-filter: invert(100%);
+            filter: invert(100%);
+  }
+  .localisation__container {
+    background-color: #535050;
+  }
+  .localisation__container input[type=text] {
+    background-color: #535050;
+    border: 1px solid #e9e9e9;
+  }
+  .localisation__container input[type=text][placeholder="Kinshasa, Gombe"] {
+    background: white;
+    padding-left: 0.5rem;
+    border-radius: 0.93rem;
+  }
+  .info {
+    background-color: #595b68;
+  }
+  .fonctionnement {
+    background-color: rgb(102.85, 102.85, 102.85);
+  }
+  .fa-location-dot,
+  .info__title,
+  .fonctionnement__title,
+  .info__text,
+  .fa-solid,
+  li,
+  .fa-heart,
+  .restaurants__title,
+  .card__restaurant--title,
+  .restaurant__card--title2,
+  .card__restaurant--subtitle,
+  .card__restaurant--icon,
+  .restaurant__page--title,
+  .restaurant__card--title,
+  .restaurant__page--icon,
+  .restaurant__card--subtitle,
+  .restaurant__card--description,
+  .restaurant__card--price,
+  .footer__title,
+  .footer__list {
+    color: #e9e9e9;
+  }
+  .button-form__link,
+  .card,
+  .restaurant__card--info {
+    background-color: #41424a;
+  }
+  .restaurant__card--price .fa-circle-check {
+    color: #353535;
+  }
+  .restaurant {
+    background-color: rgb(102.85, 102.85, 102.85);
+  }
+  .restaurant__page--headline,
+  .restaurant__background--card,
+  .restaurant__block--menu {
+    background-color: #595b68;
+  }
+  .button-form__link:hover,
+  .restaurant__card--info:hover,
+  .card:hover {
+    -webkit-box-shadow: 0 0.25rem 1.25rem rgba(161, 156, 156, 0.3490196078);
+            box-shadow: 0 0.25rem 1.25rem rgba(161, 156, 156, 0.3490196078);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(152.4, 94.45, 221.75);
+  }
+  .info__button:hover,
+  .restaurant__button-order:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.1490196078) 0%, rgba(255, 255, 255, 0.1490196078) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+    -webkit-box-shadow: 0 0.25rem 0.93rem 0 rgba(161, 156, 156, 0.3490196078);
+            box-shadow: 0 0.25rem 0.93rem 0 rgba(161, 156, 156, 0.3490196078);
+  }
+}
