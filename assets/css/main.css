@@ -132,9 +132,6 @@ p,
 
 /*=============== IMPORT COMPONENTS ===============*/
 /*=============== ANIMATION CONTENU PAGE RESTAURANT ===============*/
-.restaurant {
-  /* Animation des titres <h2> "Entrées - Plats - Desserts" */
-}
 .restaurant__card--title2 {
   -webkit-animation: fade-in 2s ease-in-out backwards;
           animation: fade-in 2s ease-in-out backwards;
@@ -151,9 +148,6 @@ p,
 .restaurant__card--title2:nth-of-type(3) {
   -webkit-animation-delay: 800ms;
           animation-delay: 800ms;
-}
-.restaurant {
-  /* Animation des cartes du menu */
 }
 .restaurant__card--info {
   opacity: 0;
@@ -1389,16 +1383,12 @@ footer .footer__link:hover {
   font-style: normal;
   line-height: normal;
   background-color: white;
-  /* Style de redimensionnement de l'image de la page restaurant */
 }
 .restaurant__img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 17.1rem;
   width: 100%;
-}
-.restaurant {
-  /* Style du titre <h1> et de l'icon de la page restaurant */
 }
 .restaurant__page--headline {
   display: -webkit-box;
@@ -1435,15 +1425,9 @@ footer .footer__link:hover {
     padding-left: 22.8rem;
   }
 }
-.restaurant {
-  /* Style des icônes de la page restaurant */
-}
 .restaurant__block--icons {
   font-size: 1.37rem;
   width: 1.5rem;
-}
-.restaurant {
-  /* Positionnement des icônes de la page restaurant */
 }
 .restaurant__page--icon {
   position: absolute;
@@ -1463,9 +1447,6 @@ footer .footer__link:hover {
     position: static;
     line-height: normal;
   }
-}
-.restaurant {
-  /* Style appliqué au contenu du menu "Entrées - Plats - Déserts" */
 }
 .restaurant__block--menu {
   max-width: 65.9rem;
@@ -1500,9 +1481,6 @@ footer .footer__link:hover {
     padding-left: 13.1rem;
   }
 }
-.restaurant {
-  /* Style des grands titres <h2> "Entrées - Plats - Déserts" */
-}
 .restaurant__card--title2 {
   padding-top: 3rem;
   font-family: Roboto;
@@ -1517,9 +1495,6 @@ footer .footer__link:hover {
   height: 0.18rem;
   display: block;
   background-color: #99E2D0;
-}
-.restaurant {
-  /* Positionnement du bouton "commander" */
 }
 .restaurant__button-order {
   margin: 2rem auto 2.5rem auto;

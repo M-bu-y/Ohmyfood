@@ -1,6 +1,6 @@
 /*=============== ANIMATION CONTENU PAGE RESTAURANT ===============*/
 .restaurant {
-    /* Animation des titres <h2> "Entrées - Plats - Desserts" */
+    // Animation des titres <h2> "Entrées - Plats - Desserts"
     &__card--title2 {
         animation: fade-in 2s ease-in-out backwards;
         opacity: 1;
@@ -11,7 +11,7 @@
         }
     }
 
-    /* Animation des cartes du menu */
+    // Animation des cartes du menu
     &__card--info {
         opacity: 0;
         transform: scaleX(0);
