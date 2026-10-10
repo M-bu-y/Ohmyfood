@@ -15,7 +15,7 @@
         box-shadow: 0 0.25rem 1.25rem $Color-shadows2-button;
     }
 
-    /* Style de design pour le badge "nouveau" */
+    // Style de design pour le badge "nouveau"
     &__restaurant--new {
         &:hover::before {
             box-shadow: 0.06rem 0.25rem 1.25rem rgba($Badge-text-color, 0.3);
@@ -38,7 +38,7 @@
 
     }
 
-    /* Largeur et positionnement de card */
+    // Largeur et positionnement de card
     &__restaurant--link {
         width: 100%;
         position: relative;
@@ -51,7 +51,7 @@
         }
     }
 
-    /* Redimensionnement de taille de l'image de card */
+    // Redimensionnement de taille de l'image de card
     &__restaurant--img {
         border-radius: 0.93rem 0.93rem 0 0;
         height: calc(15.6rem - 4.81rem);
@@ -59,13 +59,13 @@
         object-fit: cover;
     }
 
-    /* Style du contenu "titre et description" de card */
+    // Style du contenu "titre et description" de card
     &__restaurant--content {
         @include flex($direction: column, $gap: 0.31rem);
         padding: 0 1.4rem 0 1.4rem;
     }
 
-    /* Style du titre de card */
+    // Style du titre de card
     &__restaurant--title {
         font-family: $Body-font-text;
         padding-left: 0.18rem;
@@ -73,14 +73,14 @@
         width: 100%;
     }
 
-    /* Style du sous-titre de card */
+    // Style du sous-titre de card
     &__restaurant--subtitle {
         font-weight: $Font-size-small;
         padding-left: 0.18rem;
         padding-bottom: 1rem;
     }
 
-    /* Positionnement de l'icône de card */
+    // Positionnement de l'icône de card
     &__restaurant--icon {
         position: absolute;
         right: 1.4rem;

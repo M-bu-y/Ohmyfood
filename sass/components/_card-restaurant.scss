@@ -32,7 +32,7 @@
         }
     }
 
-    /* Style du conteneur d'information des cards */
+    // Style du conteneur d'information des cards
     .restaurant__card--content {
         flex: 1 1 0;
         min-width: 0;
@@ -51,7 +51,7 @@
             font-size: 0.95rem;
         }
 
-        /* Style des sous-titres <h3> d'information des cards */
+        // Style des sous-titres <h3> d'information des cards
         .restaurant__card--subtitle {
             margin-top: 0.75rem;
             font-family: $Body-font-text;
@@ -60,7 +60,7 @@
         }
     }
 
-    /* Style des conteneurs de prix */
+    // Style des conteneurs de prix
     .restaurant__card--price {
         @include flex ($align: center);
         width: 6.25rem;

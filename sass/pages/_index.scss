@@ -91,14 +91,14 @@
         padding-top: 1.87rem;
     }
 
-    /* Style du titre de la section "Restaurants" */
+    // Style du titre de la section "Restaurants"
     &__title {
         padding-left: 0.18rem;
         width: 100%;
         max-width: 67.5rem;
     }
 
-    /* Style de l'ensemble du conteneur regroupant toutes les cards */
+    // Style de l'ensemble du conteneur regroupant toutes les cards
     &__block--container {
         @include flex(row, center, center, 1.12rem);
         flex-wrap: wrap;

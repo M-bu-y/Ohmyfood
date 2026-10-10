@@ -296,9 +296,7 @@ p,
 /*=============== IMPORT "VARIABLES / MIXINS" ===============*/
 /*=============== BUTTON STYLE ===============*/
 /* Style des boutons de la section "fonctionnement" */
-.fonctionnement {
-  /* Applique le style au block <ol> */
-}
+
 .fonctionnement__buttons {
   counter-reset: nbButton; /* Initialiser un compteur de chiffre */
 }
@@ -327,9 +325,7 @@ p,
     max-width: 20.9rem;
   }
 }
-.button-form {
-  /* Change le style des chiffres à gauche des icônes */
-}
+
 .button-form:before {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -353,14 +349,8 @@ p,
   height: 1.5rem;
   border-radius: 50%;
 }
-.button-form {
-  /* Style de couleur pour les icônes */
-}
 .button-form__icon {
   color: #7E7E7E;
-}
-.button-form {
-  /* Forme de rectangle */
 }
 .button-form__link {
   margin-left: -0.75rem;
@@ -425,9 +415,6 @@ p,
   -webkit-box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.3490196078);
           box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.3490196078);
 }
-.card {
-  /* Style de design pour le badge "nouveau" */
-}
 .card__restaurant--new:hover::before {
   -webkit-box-shadow: 0.06rem 0.25rem 1.25rem rgba(0, 135, 102, 0.3);
           box-shadow: 0.06rem 0.25rem 1.25rem rgba(0, 135, 102, 0.3);
@@ -450,9 +437,6 @@ p,
   transition: box-shadow 0.5s, transform 0.5s;
   transition: box-shadow 0.5s, transform 0.5s, -webkit-box-shadow 0.5s, -webkit-transform 0.5s;
 }
-.card {
-  /* Largeur et positionnement de card */
-}
 .card__restaurant--link {
   width: 100%;
   position: relative;
@@ -468,18 +452,12 @@ p,
     max-width: 30.6rem;
   }
 }
-.card {
-  /* Redimensionnement de taille de l'image de card */
-}
 .card__restaurant--img {
   border-radius: 0.93rem 0.93rem 0 0;
   height: 10.79rem;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.card {
-  /* Style du contenu "titre et description" de card */
 }
 .card__restaurant--content {
   display: -webkit-box;
@@ -498,25 +476,16 @@ p,
   gap: 0.31rem;
   padding: 0 1.4rem 0 1.4rem;
 }
-.card {
-  /* Style du titre de card */
-}
 .card__restaurant--title {
   font-family: Roboto;
   padding-left: 0.18rem;
   margin-top: -0.3rem;
   width: 100%;
 }
-.card {
-  /* Style du sous-titre de card */
-}
 .card__restaurant--subtitle {
   font-weight: 300;
   padding-left: 0.18rem;
   padding-bottom: 1rem;
-}
-.card {
-  /* Positionnement de l'icône de card */
 }
 .card__restaurant--icon {
   position: absolute;
@@ -572,9 +541,7 @@ p,
   -webkit-transform: rotate(2turn);
           transform: rotate(2turn);
 }
-.restaurant__card--info {
-  /* Style du conteneur d'information des cards */
-}
+
 .restaurant__card--info .restaurant__card--content {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
@@ -594,18 +561,14 @@ p,
   font-weight: 700;
   font-size: 0.95rem;
 }
-.restaurant__card--info .restaurant__card--content {
-  /* Style des sous-titres <h3> d'information des cards */
-}
+
 .restaurant__card--info .restaurant__card--content .restaurant__card--subtitle {
   margin-top: 0.75rem;
   font-family: Roboto;
   font-weight: 300;
   font-size: 0.85rem;
 }
-.restaurant__card--info {
-  /* Style des conteneurs de prix */
-}
+
 .restaurant__card--info .restaurant__card--price {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -780,9 +743,6 @@ p,
   border: 0.06rem solid rgba(255, 255, 255, 0.18);
   -webkit-box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.37);
           box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.37);
-}
-.loader {
-  /* Style des cercles source : https://youtu.be/U3hCPkV9SnU?si=dl3_HEngwzSLMRHx */
 }
 .loader__circle {
   margin: auto;
@@ -1330,16 +1290,10 @@ footer .footer__link:hover {
     padding-top: 1.87rem;
   }
 }
-.restaurants {
-  /* Style du titre de la section "Restaurants" */
-}
 .restaurants__title {
   padding-left: 0.18rem;
   width: 100%;
   max-width: 67.5rem;
-}
-.restaurants {
-  /* Style de l'ensemble du conteneur regroupant toutes les cards */
 }
 .restaurants__block--container {
   display: -webkit-box;
