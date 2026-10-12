@@ -23,7 +23,7 @@ L'objectif était d'intégrer une maquette Figma en HTML et SASS, en mettant l'a
 
 ## 📸 Aperçu du projet
 
-| Version Mobile (Mobile First) | Version Desktop / Tablette |
+| Version Mobile (Mobile First) | Version Tablette |
 | :---: | :---: |
 | ![Aperçu Mobile](./assets/images/aperçu-mobile.png) | ![Aperçu tablette](./assets/images/aperçu-tablette.png) |  
 
@@ -74,15 +74,17 @@ Ouvrez ensuite le fichier index.html dans votre navigateur (double-clic ou "Ouvr
 
     Aucun serveur ou installation complexe n'est requis : c'est du pur HTML/CSS statique.
 
-👤 Auteur
 
-Emmanuel M. Bamanya (M-bu-y)
-Développeur Web & Analyste Concepteur
+
+---
+
+## 👤 Auteur
+
+**Emmanuel M. Bamanya (M-bu-y)**
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white&style=for-the-badge)](https://github.com/M-bu-y)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white&style=for-the-badge)](https://www.linkedin.com/in/emmanuel-mbuyi)
 
+---
 
-⭐ Projet réalisé dans le cadre de la formation OpenClassrooms - Toute ressemblance avec un site existant serait purement fortuite.
-
-
+⭐ *Projet réalisé dans le cadre de la formation OpenClassrooms - Toute ressemblance avec un site existant serait purement fortuite.*
