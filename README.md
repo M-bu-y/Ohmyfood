@@ -72,9 +72,7 @@ git clone git@github.com:M-bu-y/Ohmyfood.git
 
 Ouvrez ensuite le fichier index.html dans votre navigateur (double-clic ou "Ouvrir avec").
 
-    Aucun serveur ou installation complexe n'est requis : c'est du pur HTML/CSS statique.
-
-
+Aucun serveur ou installation complexe n'est requis : c'est du pur HTML/CSS statique.
 
 ---
 
@@ -88,3 +86,6 @@ Ouvrez ensuite le fichier index.html dans votre navigateur (double-clic ou "Ouvr
 ---
 
 ⭐ *Projet réalisé dans le cadre de la formation OpenClassrooms - Toute ressemblance avec un site existant serait purement fortuite.*
+
+
+
