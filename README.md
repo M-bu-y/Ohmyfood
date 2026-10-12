@@ -86,6 +86,3 @@ Aucun serveur ou installation complexe n'est requis : c'est du pur HTML/CSS stat
 ---
 
 ⭐ *Projet réalisé dans le cadre de la formation OpenClassrooms - Toute ressemblance avec un site existant serait purement fortuite.*
-
-
-
