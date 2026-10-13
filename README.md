@@ -75,7 +75,6 @@ Ouvrez ensuite le fichier index.html dans votre navigateur (double-clic ou "Ouvr
     Aucun serveur ou installation complexe n'est requis : c'est du pur HTML/CSS statique.
 
 
-
 ---
 
 ## 👤 Auteur
@@ -88,3 +87,17 @@ Ouvrez ensuite le fichier index.html dans votre navigateur (double-clic ou "Ouvr
 ---
 
 ⭐ *Projet réalisé dans le cadre de la formation OpenClassrooms - Toute ressemblance avec un site existant serait purement fortuite.*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
