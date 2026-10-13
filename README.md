@@ -81,16 +81,12 @@ Ouvrez ensuite le fichier index.html dans votre navigateur (double-clic ou "Ouvr
 
 **Emmanuel M. Bamanya (M-bu-y)**
 
-[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white&style=for-the-badge)](https://github.com/M-bu-y)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white&style=for-the-badge)](https://www.linkedin.com/in/emmanuel-mbuyi)
+- [Mon profil GitHub](https://github.com/M-bu-y)
+- [Mon profil LinkedIn](https://www.linkedin.com/in/emmanuel-mbuyi)
 
 ---
 
 ⭐ *Projet réalisé dans le cadre de la formation OpenClassrooms - Toute ressemblance avec un site existant serait purement fortuite.*
-
-
-
-
 
 
 
