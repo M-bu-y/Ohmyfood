@@ -77,7 +77,7 @@ Ouvrez ensuite le fichier index.html dans votre navigateur (double-clic ou "Ouvr
 
 ---
 
-## 👤 Auteur
+##👤Auteur
 
 **Emmanuel M. Bamanya (M-bu-y)**
 
