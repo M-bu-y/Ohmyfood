@@ -54,16 +54,6 @@ sass/
 
 ---
 
-## ✨ Fonctionnalités clés
-
-- ✅ **Mobile First** : Conçu d'abord pour les petits écrans.
-- ✅ **Animations CSS** : Loader, apparition progressive des cartes, icônes "cœur".
-- ✅ **Mode sombre automatique** : Détection des préférences utilisateur (`prefers-color-scheme`).
-- ✅ **Architecture SASS** : Code modulaire et maintenable.
-- ✅ **Responsive Design** : Adapté aux mobiles, tablettes et ordinateurs.
-
----
-
 ## 🚀 Visualiser le projet en local
 
 ```bash
@@ -77,18 +67,24 @@ Ouvrez ensuite le fichier index.html dans votre navigateur (double-clic ou "Ouvr
 
 ---
 
-##👤Auteur
+## ✨ Fonctionnalités clés
+
+- ✅ **Mobile First** : Conçu d'abord pour les petits écrans.
+- ✅ **Animations CSS** : Loader, apparition progressive des cartes, icônes "cœur".
+- ✅ **Mode sombre automatique** : Détection des préférences utilisateur (`prefers-color-scheme`).
+- ✅ **Architecture SASS** : Code modulaire et maintenable.
+- ✅ **Responsive Design** : Adapté aux mobiles, tablettes et ordinateurs.
+
+---
+
+## 👤 Auteur
 
 **Emmanuel M. Bamanya (M-bu-y)**
 
-- [Mon profil GitHub](https://github.com/M-bu-y)
-- [Mon profil LinkedIn](https://www.linkedin.com/in/emmanuel-mbuyi)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white&style=for-the-badge)](https://github.com/M-bu-y)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white&style=for-the-badge)](https://www.linkedin.com/in/emmanuel-mbuyi)
 
 ---
 
 ⭐ *Projet réalisé dans le cadre de la formation OpenClassrooms - Toute ressemblance avec un site existant serait purement fortuite.*
-
-
-
-
 
